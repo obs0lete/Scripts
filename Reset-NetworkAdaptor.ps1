@@ -1,10 +1,10 @@
-#function Reset-NetworkAdaptors {
+#function Reset-NetworkAdaptor {
     [CmdletBinding()]
     param(
         [switch]$Enable,
         [switch]$Disable
     )
-    # Test if we are running as an administrator.
+    # Test if we are running as an administrator
     $ErrorActionPreference = "Stop"
     if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
                 [Security.Principal.WindowsBuiltInRole] "Administrator")) {
