@@ -1,8 +1,4 @@
-# Quick script that will reset all the network adaptors.
-# you can run as-is or save it to your PowerShell profile.
-# Note that this will require an elevated prompt to run.
-
-process {
+#function Reset-AllNetworkAdaptors {
     # Test if we are running as an administrator.
     $ErrorActionPreference = "Stop"
     if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
@@ -20,4 +16,4 @@ process {
         Enable-NetAdapter -Name $i -Confirm:$false
         ""
     }
-}
+#}
